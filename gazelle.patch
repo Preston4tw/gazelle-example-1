@@ -1,0 +1,10 @@
+diff --git a/def.bzl b/def.bzl
+index b8a4434..e6fc4b3 100644
+--- a/def.bzl
++++ b/def.bzl
+@@ -184,4 +184,5 @@ def gazelle(name, **kwargs):
+         srcs = [runner_name],
+         tags = tags,
+         visibility = visibility,
++        data = kwargs["data"] if "data" in kwargs else [],
+     )
